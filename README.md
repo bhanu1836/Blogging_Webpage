@@ -10,7 +10,7 @@
 
 ```bash
 
-cd Blogging-Website
+git clone https://github.com/bhanu1836/Blogging_Webpage.git
 ```
 ### Install dependencies
 ```console 
