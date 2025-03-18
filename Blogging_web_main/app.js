@@ -8,7 +8,7 @@ const sessions = require("express-session");
 const PosT = require("./postdb");
 const Profile = require("./profiledb");
 // const conn = require("./connection")
-let imagename
+let imagename 
 const multer = require("multer");
 const { send, title } = require("process");
 const { profile } = require("console");
