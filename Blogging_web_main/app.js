@@ -23,8 +23,11 @@ const storage = multer.diskStorage({
     imagename = file.originalname;
   },
 });
+
 const upload = multer({ storage: storage });
 let user;
+// Add near the top of file, after mongoose import
+mongoose.set('strictQuery', true);
 app.use(express.json());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -288,7 +291,7 @@ app.get("/profile/:customRoute", (req, res) => {
 //   }else{
 //   console.log(result.dp); 
 //   }
-// })
+// }) 
 
   PosT.find({ author: customRoute}, (err, result)=> {
     if (err){
