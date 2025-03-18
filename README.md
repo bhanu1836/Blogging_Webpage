@@ -23,3 +23,25 @@ node src/App.js
 ```sh
 The Website will be available at http://localhost:3000
 ```
+
+Here are some key aspects of the code:
+
+## Core Setup:
+#### 1.Uses Express.js as the web framework
+#### 2.MongoDB with Mongoose for data storage
+#### 3.EJS for template rendering
+#### 4.Express-session for user session management
+#### 5.Multer for file uploads
+## Main Features:
+#### 1.User authentication (login/signup)
+#### 2.Post creation and management
+#### 3.Profile management
+#### 4.Admin dashboard
+#### 5.Like system for posts
+#### 6.File upload for post thumbnails and profile pictures
+#### 7.Search functionality
+## Core Models:
+#### 1.Post (PosT)
+#### 2.Profile
+#### 3.Visit (for tracking site visits)
+
