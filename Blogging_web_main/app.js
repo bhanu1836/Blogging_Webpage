@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 let user;
-// Add near the top of file, after mongoose import
+
 mongoose.set('strictQuery', true);
 app.use(express.json());
 app.set("view engine", "ejs");
