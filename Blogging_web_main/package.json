@@ -1,9 +1,14 @@
 {
   "name": "blogging-web-main",
   "version": "1.0.0",
+  "main": "app.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "node app.js",
-    "build": "npm install",
+    "build": "npm install && npm run compile",
+    "compile": "echo 'Build completed'",
     "dev": "nodemon app.js"
   },
   "dependencies": {
