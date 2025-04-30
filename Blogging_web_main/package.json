@@ -1,4 +1,11 @@
 {
+  "name": "blogging-web-main",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "build": "npm install",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
