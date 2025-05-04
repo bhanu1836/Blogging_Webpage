@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 
-// Fix strictQuery deprecation warning
 mongoose.set('strictQuery', true);
 
-// Define schema before connection
 const profileSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   fullname: { type: String, required: true },
@@ -24,7 +22,6 @@ const profileSchema = new mongoose.Schema({
 // Create model
 const Profile = mongoose.model("profile", profileSchema);
 
-// Improved connection function with error handling
 async function connectDB() {
   try {
     await mongoose.connect(
@@ -37,11 +34,11 @@ async function connectDB() {
     console.log("profile connected");
   } catch (error) {
     console.error("MongoDB connection error:", error);
-    process.exit(1); // Exit process with failure
+    process.exit(1); 
   }
 }
+ 
 
-// Execute connection
 connectDB();
 
 module.exports = Profile;

@@ -369,24 +369,20 @@ app.post("/editprofile/:custom",upload.single("image"), async (req, res) => {
 app.get("/admin", async (req, res) => {
     if (req.session.type === "admin") {
         try {
-            // Get visits data
             let visits = await Visit.find();
             
-            // If no visit record exists, create one
             if (!visits.length) {
                 const newVisit = new Visit({ visits: 0 });
                 await newVisit.save();
                 visits = [newVisit];
             }
 
-            // Get posts and users data
             const posts = await PosT.find();
-            const profiles = await Profile.find(); // Changed from users to profiles
-
+            const profiles = await Profile.find(); 
             res.render('admin', { 
                 visits: visits,
                 posts: posts,
-                profiles: profiles, // Changed from users to profiles
+                profiles: profiles, 
                 username: req.session.username
             });
         } catch (error) {
